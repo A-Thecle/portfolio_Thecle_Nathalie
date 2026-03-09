@@ -1,0 +1,168 @@
+/* SECTION SERVICES */
+
+.services {
+  color: #fff;
+  padding: 100px 10%;
+  background: linear-gradient(to right, #112240, #0a1a2f);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+
+.sub-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 70px;
+  font-weight: bold;
+}
+
+.sub-title span {
+  background: linear-gradient(90deg, #00D4FF, #38BDF8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* CARD */
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px 30px;
+  border-radius: 22px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+
+  transition: 
+  transform 0.4s ease,
+  box-shadow 0.4s ease,
+  border 0.4s ease;
+}
+
+/* ICON */
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  transition: transform 0.4s ease;
+}
+
+/* TITLE */
+
+.service-card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #38BDF8;
+}
+
+/* DESCRIPTION */
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #cbd5e1;
+}
+
+/* BUTTON */
+
+.read {
+  display: inline-block;
+  padding: 10px 28px;
+
+  background: linear-gradient(135deg,#00D4FF,#38BDF8);
+
+  border-radius: 40px;
+
+  font-size: 14px;
+
+  color: #0F172A;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease;
+}
+
+/* CARD HOVER */
+
+.service-card:hover {
+
+  transform: translateY(-12px);
+
+  box-shadow: 0 18px 45px rgba(0,212,255,0.35);
+
+  border: 1px solid rgba(0,212,255,0.3);
+}
+
+/* ICON ANIMATION */
+
+.service-card:hover .icon {
+
+  transform: scale(1.2) rotate(6deg);
+}
+
+/* BUTTON HOVER */
+
+.read:hover {
+
+  background: #38BDF8;
+
+  box-shadow: 0 0 15px #00D4FF;
+
+  transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .services {
+    padding: 80px 8%;
+  }
+
+  .sub-title {
+    font-size: 36px;
+  }
+
+  .services-list {
+    gap: 30px;
+    justify-content: center; /* <-- Ajouté pour centrer les cartes */
+  }
+
+}
+@media (max-width: 480px) {
+  .services-list {
+    grid-template-columns: 1fr; /* une seule colonne */
+    justify-content: center;
+  }
+}

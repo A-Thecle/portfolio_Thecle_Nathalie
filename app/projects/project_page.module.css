@@ -1,0 +1,325 @@
+/* PAGE */
+
+.projectsPage{
+padding:120px 8%;
+background:linear-gradient(to right,#0a1a2f,#112240);
+color:white;
+display:flex;
+flex-direction:column;
+gap:90px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+max-width:750px;
+margin:auto;
+}
+
+.header h2{
+font-size:3.2rem;
+margin-bottom:20px;
+}
+
+.header span{
+color:#00d4ff;
+}
+
+.header p{
+line-height:1.8;
+color:rgba(255,255,255,0.8);
+font-size:1.1rem;
+}
+
+/* CATEGORY */
+
+.category{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.category h3{
+font-size:2rem;
+color:#00d4ff;
+border-left:4px solid #00d4ff;
+padding-left:12px;
+}
+
+/* HORIZONTAL SCROLL */
+
+.horizontalScroll{
+
+display:flex;
+gap:35px;
+
+overflow-x:auto;
+
+padding-bottom:20px;
+
+scroll-snap-type:x mandatory;
+}
+
+.horizontalScroll::-webkit-scrollbar{
+height:8px;
+}
+
+.horizontalScroll::-webkit-scrollbar-thumb{
+background:#00d4ff;
+border-radius:20px;
+}
+
+/* CARD */
+
+.projectCard{
+
+min-width:500px;
+max-width:500px;
+
+background:rgba(255,255,255,0.05);
+
+border-radius:20px;
+
+padding:22px;
+
+display:flex;
+flex-direction:column;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 0 25px rgba(0,212,255,0.18);
+
+transition:0.4s ease;
+
+scroll-snap-align:start;
+
+min-height:480px;
+
+
+}
+
+.projectCard:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 45px rgba(0,212,255,0.35);
+}
+
+
+
+/* TITLE */
+
+.projectCard h4{
+
+font-size:1.25rem;
+
+margin-bottom:8px;
+}
+
+/* DESCRIPTION */
+
+.projectCard p{
+
+font-size:0.95rem;
+
+color:rgba(255,255,255,0.8);
+
+line-height:1.6;
+
+margin-bottom:10px;
+}
+
+/* TECH */
+
+.tech{
+
+font-size:0.85rem;
+
+color:#00d4ff;
+
+margin-bottom:20px;
+}
+
+/* BUTTONS */
+
+.buttons {
+  margin-top: auto;
+}
+
+.buttons a{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-right:10px;
+padding:8px 18px;
+border-radius:30px;
+font-size:13px;
+text-decoration:none;
+background:#00D4FF;
+color:#0F172A;
+font-weight:600;
+transition:0.3s;
+}
+
+.buttons a:hover {
+  background: #38BDF8;
+}
+
+.icon{
+font-size:16px;
+}
+/* BACK BUTTON */
+
+.backHome{
+
+text-align:center;
+
+margin-top:50px;
+}
+
+.backHome a{
+
+padding:14px 34px;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,#00d4ff,#007cf0);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.backHome a:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 30px rgba(0,212,255,0.4);
+}
+
+
+/* ================= MOBILE SECTION ================= */
+.mobileSection{
+display:flex;
+gap:60px;
+overflow-x:auto;
+padding-bottom:20px;
+scroll-snap-type:x mandatory;
+justify-content:center;
+margin:0 auto;
+max-width:1200px;
+}
+
+.mobileCard{
+min-width:350px;
+max-width:350px;
+background:#0f1b33;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,212,255,0.2);
+flex-shrink:0;
+display:flex;
+flex-direction:column;
+scroll-snap-align:start;
+transition:0.3s;
+
+
+
+
+}
+.titleSection{
+font-size:2rem;
+color:#00d4ff;
+border-left:4px solid #00d4ff;
+padding-left:12px;
+}
+
+.mobileCard:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px rgba(0,212,255,0.35);
+}
+.mobileCard img {
+    width: 100%;
+    height: 500PX;
+    display: block;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.projectInfo {
+    padding: 10px;
+    font-size: 13px;
+   
+   
+}
+
+/* TITLE */
+
+.projectInfo h4{
+margin-bottom:6px;
+font-size:1.25rem;
+margin-bottom:8px;
+}
+
+/* DESCRIPTION */
+
+.projectInfo p{
+font-size:13px;
+line-height:1.5;
+color:rgba(255,255,255,0.8);
+margin-bottom:8px;
+}
+
+/* TECH */
+
+.tech{
+font-size:12px;
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+/* BUTTONS */
+
+.buttons a{
+margin-right:8px;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+text-decoration:none;
+background:#00D4FF;
+color:#0F172A;
+font-weight:600;
+transition:0.3s;
+}
+
+.buttons a:hover{
+background:#38BDF8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.projectsPage{
+padding:90px 6%;
+}
+
+.header h2{
+font-size:2.4rem;
+}
+
+.projectCard{
+min-width:300px;
+max-width:300px;
+min-height:450px;
+}
+
+.projectCard img{
+height:180px;
+}
+
+}
