@@ -205,99 +205,164 @@ box-shadow:0 12px 30px rgba(0,212,255,0.4);
 
 /* ================= MOBILE SECTION ================= */
 .mobileSection{
-display:flex;
-gap:60px;
-overflow-x:auto;
-padding-bottom:20px;
-scroll-snap-type:x mandatory;
-justify-content:center;
-margin:0 auto;
-max-width:1200px;
+  display:flex;
+  gap:60px;
+  overflow-x:auto;
+  padding-bottom:20px;
+  scroll-snap-type:x mandatory;
+  justify-content:center;
+  margin:0 auto;
+  max-width:1200px;
 }
 
+/* CARD */
 .mobileCard{
-min-width:350px;
-max-width:350px;
-background:#0f1b33;
-border-radius:30px;
-overflow:hidden;
-box-shadow:0 6px 20px rgba(0,212,255,0.2);
-flex-shrink:0;
-display:flex;
-flex-direction:column;
-scroll-snap-align:start;
-transition:0.3s;
-
-
-
-
+  min-width:300px;
+  max-width:300px;
+  background:#0f1b33;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,212,255,0.2);
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  scroll-snap-align:start;
+  transition:0.3s;
 }
-.titleSection{
+
+/* IMAGE */
+.mobileCard img {
+  width: 100%;
+  height: 400px;   /* plus petite par défaut */
+  display: block;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  object-fit: cover;  /* garde le ratio et rempli la carte */
+}
+
+/* PROJECT INFO */
+.projectInfo {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.projectInfo h4{
+  margin-bottom:8px;
+  font-size:1.25rem;
+}
+
+.projectInfo p{
+  font-size:13px;
+  line-height:1.5;
+  color:rgba(255,255,255,0.8);
+  margin-bottom:8px;
+}
+
+/* TECH */
+.tech{
+  font-size:12px;
+  color:#00d4ff;
+  margin-bottom:10px;
+}
+
+/* BUTTONS */
+.buttons a{
+  margin-right:8px;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  text-decoration:none;
+  background:#00D4FF;
+  color:#0F172A;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.buttons a:hover{
+  background:#38BDF8;
+}
+.titleSection {
+  
 font-size:2rem;
 color:#00d4ff;
 border-left:4px solid #00d4ff;
 padding-left:12px;
+
 }
 
-.mobileCard:hover{
-transform:translateY(-6px);
-box-shadow:0 0 30px rgba(0,212,255,0.35);
-}
-.mobileCard img {
-    width: 100%;
-    height: 500PX;
-    display: block;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-.projectInfo {
-    padding: 10px;
-    font-size: 13px;
-   
-   
+/* ================= RESPONSIVE ================= */
+
+/* Tablette grand écran */
+@media(max-width:1024px){
+  .mobileSection{
+    gap:40px;
+  }
 }
 
-/* TITLE */
+/* Tablette et petit écran */
+@media(max-width:768px){
+  .mobileSection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;  /* cartes centrées */
+    gap:30px;
+  }
 
-.projectInfo h4{
-margin-bottom:6px;
-font-size:1.25rem;
-margin-bottom:8px;
+  .mobileCard{
+  
+  }
+
+  .mobileCard img{
+    height: auto;  /* s’adapte à la largeur */
+    max-height:300px; /* limite hauteur */
+    border-radius:20px;
+  }
+
+  .projectInfo h4{
+    font-size:1.1rem;
+  }
+
+  .projectInfo p{
+    font-size:0.95rem;
+  }
+
+  .tech{
+    font-size:11px;
+  }
+
+  .buttons a{
+    font-size:11px;
+    padding:6px 12px;
+  }
 }
 
-/* DESCRIPTION */
+/* Petit mobile */
+@media(max-width:480px){
+  .mobileCard{
+    
+  }
 
-.projectInfo p{
-font-size:13px;
-line-height:1.5;
-color:rgba(255,255,255,0.8);
-margin-bottom:8px;
-}
+  .mobileCard img{
+    height:auto;
+    max-height:250px; /* limite la hauteur sur petit écran */
+  }
 
-/* TECH */
+  .projectInfo h4{
+    font-size:1rem;
+  }
 
-.tech{
-font-size:12px;
-color:#00d4ff;
-margin-bottom:10px;
-}
+  .projectInfo p{
+    font-size:0.9rem;
+  }
 
-/* BUTTONS */
+  .tech{
+    font-size:10px;
+  }
 
-.buttons a{
-margin-right:8px;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-text-decoration:none;
-background:#00D4FF;
-color:#0F172A;
-font-weight:600;
-transition:0.3s;
-}
-
-.buttons a:hover{
-background:#38BDF8;
+  .buttons a{
+    font-size:10px;
+    padding:5px 10px;
+  }
 }
 
 /* RESPONSIVE */
