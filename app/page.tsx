@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaFacebook, FaEye , FaYoutube, FaFilePdf} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaEye , FaYoutube, FaFilePdf, FaBars} from "react-icons/fa";
 import { FaPython, FaHtml5, FaCss3Alt, FaNodeJs, FaAngular } from "react-icons/fa";
 import { SiTensorflow,  SiNextdotjs, SiFlutter, SiFigma } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -11,12 +12,18 @@ import projectStyles from "./css/projects.module.css";
 import contactStyles from "./css/contact.module.css"
 import ContactForm from "./components/contactForm";
 import Homestyles from "./css/home.module.css";
+import { useState } from "react";
+
 
 
 
 export default function Home() {
+    // ETAT DU MENU MOBILE
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#112240] text-white">
+
+      
 
       {/* NAVBAR */}
  <nav className={Homestyles.navbar}>
@@ -24,7 +31,15 @@ export default function Home() {
     Tech_<span>Thècle</span>
   </div>
 
-  <ul className={Homestyles.navLinks}>
+   {/* HAMBURGER */}
+  <div 
+    className={Homestyles.menuIcon}
+    onClick={()=>setMenuOpen(!menuOpen)}
+  >
+    <FaBars/>
+  </div>
+
+  <ul className={`${Homestyles.navLinks} ${menuOpen ? Homestyles.activeMenu : ""}`}>
     <li className={Homestyles.active}><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>

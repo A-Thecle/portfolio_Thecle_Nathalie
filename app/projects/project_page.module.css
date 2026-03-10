@@ -290,6 +290,14 @@ padding-left:12px;
 
 }
 
+.mobileCard:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 45px rgba(0,212,255,0.35);
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 /* Tablette grand écran */
@@ -303,19 +311,20 @@ padding-left:12px;
 @media(max-width:768px){
   .mobileSection{
     display:flex;
-    flex-direction:column;
-    align-items:center;  /* cartes centrées */
-    gap:30px;
+    flex-direction:row;   /* reste horizontal */
+    gap:20px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding-bottom:20px;
   }
 
   .mobileCard{
-  
+    min-width:260px;
+    max-width:260px;
   }
 
   .mobileCard img{
-    height: auto;  /* s’adapte à la largeur */
-    max-height:300px; /* limite hauteur */
-    border-radius:20px;
+    height:320px;
   }
 
   .projectInfo h4{
@@ -338,13 +347,17 @@ padding-left:12px;
 
 /* Petit mobile */
 @media(max-width:480px){
+  .mobileSection{
+    gap:15px;
+  }
+
   .mobileCard{
-    
+    min-width:230px;
+    max-width:230px;
   }
 
   .mobileCard img{
-    height:auto;
-    max-height:250px; /* limite la hauteur sur petit écran */
+    height:300px;
   }
 
   .projectInfo h4{
@@ -387,4 +400,12 @@ min-height:450px;
 height:180px;
 }
 
+}
+.mobileSection::-webkit-scrollbar{
+  height:8px;
+}
+
+.mobileSection::-webkit-scrollbar-thumb{
+  background:#00d4ff;
+  border-radius:20px;
 }

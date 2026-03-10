@@ -3,9 +3,11 @@
 import { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import contactStyles from "../css/contact.module.css";
+import { useState } from "react";
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({ name: "", email: "" });
 
   useEffect(() => {
     emailjs.init("BqXAyqQ9Ef66CbR5c"); // Initialise une seule fois
