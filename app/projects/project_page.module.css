@@ -203,181 +203,156 @@ box-shadow:0 12px 30px rgba(0,212,255,0.4);
 }
 
 
-/* ================= MOBILE SECTION ================= */
-.mobileSection{
-  display:flex;
-  gap:60px;
-  overflow-x:auto;
-  padding-bottom:20px;
-  scroll-snap-type:x mandatory;
-  justify-content:center;
-  margin:0 auto;
-  max-width:1200px;
+/* ================= MOBILE HORIZONTAL SCROLL ================= */
+.mobileSection {
+  display: flex;
+  gap: 20px; /* espace entre les cartes */
+  overflow-x: auto; /* scroll horizontal activé */
+  scroll-snap-type: x mandatory; /* les cartes s’alignent lors du scroll */
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch; /* smooth scroll sur iOS */
+  margin: 0 auto;
+  max-width: 100%; /* pour ne pas dépasser l’écran */
 }
 
-/* CARD */
-.mobileCard{
-  min-width:300px;
-  max-width:300px;
-  background:#0f1b33;
-  border-radius:30px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,212,255,0.2);
-  flex-shrink:0;
-  display:flex;
-  flex-direction:column;
-  scroll-snap-align:start;
-  transition:0.3s;
+.mobileSection::-webkit-scrollbar {
+  height: 8px; /* hauteur de la scrollbar */
 }
 
-/* IMAGE */
+.mobileSection::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+  border-radius: 20px;
+}
+
+/* ================= MOBILE CARD ================= */
+.mobileCard {
+  min-width: 230px; /* largeur minimale pour mobile */
+  max-width: 260px; /* largeur maximale pour mobile */
+  flex-shrink: 0; /* empêche la carte de rétrécir */
+  background: #0f1b33;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,212,255,0.2);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start; /* snap au début */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobileCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 45px rgba(0,212,255,0.35);
+}
+
+/* IMAGE DANS LA CARTE */
 .mobileCard img {
   width: 100%;
-  height: 400px;   /* plus petite par défaut */
+  height: 300px; /* taille par défaut pour mobile */
   display: block;
+  object-fit: cover; /* garder le ratio et remplir */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  object-fit: cover;  /* garde le ratio et rempli la carte */
 }
 
-/* PROJECT INFO */
+/* INFO DU PROJET */
 .projectInfo {
   padding: 10px;
   font-size: 13px;
 }
 
-.projectInfo h4{
-  margin-bottom:8px;
-  font-size:1.25rem;
+.projectInfo h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
-.projectInfo p{
-  font-size:13px;
-  line-height:1.5;
-  color:rgba(255,255,255,0.8);
-  margin-bottom:8px;
+.projectInfo p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 8px;
 }
 
-/* TECH */
-.tech{
-  font-size:12px;
-  color:#00d4ff;
-  margin-bottom:10px;
+.tech {
+  font-size: 10px;
+  color: #00d4ff;
+  margin-bottom: 10px;
 }
 
-/* BUTTONS */
-.buttons a{
-  margin-right:8px;
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:12px;
-  text-decoration:none;
-  background:#00D4FF;
-  color:#0F172A;
-  font-weight:600;
-  transition:0.3s;
+/* BOUTONS */
+.buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 8px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  text-decoration: none;
+  background: #00d4ff;
+  color: #0f172a;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.buttons a:hover{
-  background:#38BDF8;
+.buttons a:hover {
+  background: #38bdf8;
 }
+
 .titleSection {
-  
-font-size:2rem;
+  font-size:2rem;
 color:#00d4ff;
 border-left:4px solid #00d4ff;
 padding-left:12px;
-
 }
-
-.mobileCard:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 0 45px rgba(0,212,255,0.35);
-}
-
 
 /* ================= RESPONSIVE ================= */
+@media(max-width:768px) {
+  .mobileSection {
+    gap: 15px; /* moins d’espace sur petit écran */
+  }
 
-/* Tablette grand écran */
-@media(max-width:1024px){
-  .mobileSection{
-    gap:40px;
+  .mobileCard {
+    min-width: 220px;
+    max-width: 240px;
+  }
+
+  .mobileCard img {
+    height: 280px;
+  }
+
+  .projectInfo h4 {
+    font-size: 1rem;
+  }
+
+  .projectInfo p {
+    font-size: 0.9rem;
+  }
+
+  .tech {
+    font-size: 10px;
+  }
+
+  .buttons a {
+    font-size: 10px;
+    padding: 5px 8px;
   }
 }
 
-/* Tablette et petit écran */
-@media(max-width:768px){
-  .mobileSection{
-    display:flex;
-    flex-direction:row;   /* reste horizontal */
-    gap:20px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding-bottom:20px;
+@media(max-width:480px) {
+  .mobileSection {
+    gap: 12px;
+    padding-bottom: 15px;
   }
 
-  .mobileCard{
-    min-width:260px;
-    max-width:260px;
+  .mobileCard {
+    min-width: 200px;
+    max-width: 220px;
   }
 
-  .mobileCard img{
-    height:320px;
-  }
-
-  .projectInfo h4{
-    font-size:1.1rem;
-  }
-
-  .projectInfo p{
-    font-size:0.95rem;
-  }
-
-  .tech{
-    font-size:11px;
-  }
-
-  .buttons a{
-    font-size:11px;
-    padding:6px 12px;
+  .mobileCard img {
+    height: 250px;
   }
 }
-
-/* Petit mobile */
-@media(max-width:480px){
-  .mobileSection{
-    gap:15px;
-  }
-
-  .mobileCard{
-    min-width:230px;
-    max-width:230px;
-  }
-
-  .mobileCard img{
-    height:300px;
-  }
-
-  .projectInfo h4{
-    font-size:1rem;
-  }
-
-  .projectInfo p{
-    font-size:0.9rem;
-  }
-
-  .tech{
-    font-size:10px;
-  }
-
-  .buttons a{
-    font-size:10px;
-    padding:5px 10px;
-  }
-}
-
 /* RESPONSIVE */
 
 @media(max-width:768px){
