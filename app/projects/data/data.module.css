@@ -1,0 +1,187 @@
+.projectsPage{
+padding:120px 8%;
+background:linear-gradient(to right,#0a1a2f,#112240);
+color:white;
+display:flex;
+flex-direction:column;
+gap:90px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+max-width:750px;
+margin:auto;
+}
+
+.header h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.header span{
+color:#00d4ff;
+}
+
+.header p{
+line-height:1.8;
+color:rgba(255,255,255,0.8);
+font-size:1.1rem;
+}
+
+/* CATEGORY */
+
+.category{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.category h3{
+font-size:2rem;
+color:#00d4ff;
+border-left:4px solid #00d4ff;
+padding-left:12px;
+}
+
+/* HORIZONTAL SCROLL */
+
+.horizontalScroll{
+display:flex;
+gap:35px;
+overflow-x:auto;
+padding-bottom:20px;
+scroll-snap-type:x mandatory;
+}
+
+.horizontalScroll::-webkit-scrollbar{
+height:8px;
+}
+
+.horizontalScroll::-webkit-scrollbar-thumb{
+background:#00d4ff;
+border-radius:20px;
+}
+
+/* CARD */
+
+.projectCard{
+min-width:600px;
+max-width:420px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+padding:22px;
+display:flex;
+flex-direction:column;
+backdrop-filter:blur(12px);
+box-shadow:0 0 25px rgba(0,212,255,0.18);
+transition:0.4s ease;
+scroll-snap-align:start;
+}
+
+.projectCard:hover{
+transform:translateY(-8px);
+box-shadow:0 0 45px rgba(0,212,255,0.35);
+}
+
+.projectCard img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+/* TITLE */
+
+.projectCard h4{
+font-size:1.3rem;
+margin-bottom:8px;
+}
+
+/* DESCRIPTION */
+
+.projectCard p{
+font-size:0.95rem;
+color:rgba(255,255,255,0.8);
+line-height:1.6;
+margin-bottom:12px;
+}
+
+/* TECH */
+
+.tech{
+font-size:0.85rem;
+color:#00d4ff;
+margin-bottom:20px;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:auto;
+display:flex;
+gap:12px; /* espace entre les boutons */
+margin-top:auto;
+}
+
+.buttons a{
+display:inline-flex;
+align-items:center;
+gap:6px;
+padding:8px 18px;
+border-radius:30px;
+font-size:13px;
+text-decoration:none;
+background:#00D4FF;
+color:#0F172A;
+font-weight:600;
+transition:0.3s;
+
+}
+
+.buttons a:hover{
+background:#38BDF8;
+}
+
+.icon{
+font-size:16px;
+}
+
+/* BACK BUTTON */
+
+.backHome{
+text-align:center;
+margin-top:50px;
+}
+
+.backHome a{
+padding:14px 34px;
+border-radius:40px;
+background:linear-gradient(135deg,#00d4ff,#007cf0);
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.backHome a:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,212,255,0.4);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:480px){
+
+.projectCard{
+min-width:380px;
+max-width:380px;
+}
+
+.header h2{
+font-size:2.2rem;
+}
+
+}

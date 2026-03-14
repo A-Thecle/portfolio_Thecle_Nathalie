@@ -312,13 +312,14 @@ export default function Home() {
           <a href="/Dashboard_ventes .pdf" target="_blank" rel="noopener noreferrer"><FaFilePdf className={projectStyles.icon}/>.pdf</a> 
         </div>
       </div>
+
     </div>
       
       
 
-    {/*<div className={projectStyles.seeAll}>
+    <div className={projectStyles.seeAll}>
       <a href="/projects/data">See All Data Projects →</a>
-    </div>*/}
+    </div>
   </div>
 
   {/* WEB & MOBILE PROJECTS */}
