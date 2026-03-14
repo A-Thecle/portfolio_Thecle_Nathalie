@@ -176,8 +176,8 @@ box-shadow:0 12px 30px rgba(0,212,255,0.4);
 @media(max-width:480px){
 
 .projectCard{
-min-width:380px;
-max-width:380px;
+min-width:340px;
+max-width:34Opx;
 }
 
 .header h2{
