@@ -225,7 +225,7 @@ export default function Home() {
         <div className={skillStyles.skillItem}> 📊 Power BI</div>
         <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Machine Learning</div>
         <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Deep Learning</div>
-        <div className={skillStyles.skillItem}><SiTensorflow /> TensorFlow</div>
+        <div className={skillStyles.skillItem}><SiTensorflow />PyTorch</div>
         <div className={skillStyles.skillItem}>📊 Excel</div>
         <div className={skillStyles.skillItem}>⚡ Power Query</div>
       </div>
