@@ -273,25 +273,28 @@ export default function Home() {
     <h3>📊 Data Analytics & Science Projects</h3>
 
     <div className={projectStyles.projectsGrid}>
-      <div className={projectStyles.projectCard}>
-        <img src="/images/learning_curve.png" alt="Data Project" />
-        <h4>Titanic_ml_prediction</h4>
-        
-            <p>
-            Developed a machine learning model using AdaBoost to predict whether a passenger survived the Titanic disaster based on historical passenger data.
-            The model achieved a strong performance with a confusion matrix of [[95, 15], [17, 52]]. 
-            In particular, the recall was 0.86 for class 0 (did not survive) and 0.75 for class 1 (survived), indicating that the model correctly identifies most passengers in each class.
-            </p>
+     <div className={`${projectStyles.projectCard} ${projectStyles.houseCard}`}>
+    <img src="/images/house_price.png" alt="Data Project" />
+    <h4>House Price Prediction (Deep Learning)</h4>
     
+        <p>
+        Built a deep learning model using PyTorch to predict house prices from real estate data (21,613 samples, 21 features).
+        The pipeline includes data preprocessing, feature scaling, and train/test splitting.
         
-        <div className={projectStyles.techStack}>
-          Python • Pandas • Numpy • Scikit-learn
-        </div>
-        <div className={projectStyles.projectButtons}>
-         <a href="https://github.com/A-Thecle/titanic-ml-prediction"><FaGithub className={projectStyles.icon}/> GitHub</a>
-        {/* <a href="#">Live Demo</a> */}
-        </div>
-      </div>
+        The neural network architecture (16 → 8 → 1 neurons with ReLU and Dropout 0.3) was trained using Adam optimizer and MSE loss over 5,000 iterations.
+        
+        Achieved strong performance with an R² score of ~0.8 on the test set. MLflow was used for experiment tracking, logging metrics, artifacts, and the trained model.
+        </p>
+
+    
+    <div className={projectStyles.techStack}>
+      Python • PyTorch • MLflow • Scikit-learn • Pandas • Numpy • Matplotlib
+    </div>
+    <div className={projectStyles.projectButtons}>
+     <a href="https://github.com/your-username/house-price-project"><FaGithub className={projectStyles.icon}/> GitHub</a>
+    {/* <a href="#">Live Demo</a> */}
+    </div>
+</div>
 
       <div className={projectStyles.projectCard}>
         <img src="/images/Dashboard_ventes.png" alt="Data Project" />

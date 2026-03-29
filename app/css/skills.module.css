@@ -106,7 +106,17 @@
   }
 
   .skillList {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* ✅ toujours 2 colonnes */
+    gap: 10px;
   }
 
+  .skillItem {
+    font-size: 14px; /* texte plus petit pour mobile */
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .skillItem svg {
+    font-size: 18px;
+  }
 }
