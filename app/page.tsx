@@ -360,7 +360,7 @@ export default function Home() {
            Excel • DAX • Power Query • Power Pivot
         </div>
         <div className={projectStyles.projectButtons}>
-          <a href="https://github.com/A-Thecle/Sales-Data-Analysis-2023"><FaGithub className={projectStyles.icon}/>GitHub</a>
+          <a href="https://github.com/A-Thecle/Analyse-commerciale.git"><FaGithub className={projectStyles.icon}/>GitHub</a>
           
         </div>
       </div>
