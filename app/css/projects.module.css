@@ -130,24 +130,21 @@ font-size:16px;
 .seeAll a:hover {
   background: #38BDF8;
 }
-/* house card*/
+/* project images */
+.projectCard img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-height: 320px;
+    object-fit: cover; /* évite la déformation */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
 .houseCard img {
     width: 100%;
-    height: 400px; /* hauteur plus grande */
-    object-fit: cover; /* évite la déformation */
-    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-/* Tablette */
-@media (max-width: 992px) {
-    .houseCard img {
-        height: 200px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-    .houseCard img {
-        height: 180px;
-    }
-}

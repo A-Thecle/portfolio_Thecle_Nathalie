@@ -41,32 +41,32 @@ export default function ContactForm() {
         <input
           type="text"
           name="name"
-          placeholder="Your Name"
+          placeholder="Votre nom"
           required
         />
 
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder="Votre email"
           required
         />
 
         <input
           type="text"
           name="subject"
-          placeholder="Subject"
+          placeholder="Objet"
         />
 
         <textarea
           name="message"
           rows={6}
-          placeholder="Your Message..."
+          placeholder="Votre message..."
           required
         />
 
         <button type="submit" className={contactStyles.sendBtn}>
-          Send Message
+          Envoyer
         </button>
       </form>
     </div>

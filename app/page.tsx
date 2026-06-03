@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaFacebook, FaEye , FaYoutube, FaFilePdf, FaBars} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaEye , FaYoutube, FaFileExcel, FaBars} from "react-icons/fa";
 import { FaPython, FaHtml5, FaCss3Alt, FaNodeJs, FaAngular } from "react-icons/fa";
 import { SiTensorflow,  SiNextdotjs, SiFlutter, SiFigma } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
@@ -18,20 +18,20 @@ import { useState } from "react";
 
 
 export default function Home() {
-    // ETAT DU MENU MOBILE
+    // ÉTAT DU MENU MOBILE
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#112240] text-white">
 
       
 
-      {/* NAVBAR */}
+      {/* BARRE DE NAVIGATION */}
  <nav className={Homestyles.navbar}>
   <div className={Homestyles.logo}>
     Tech_<span>Thècle</span>
   </div>
 
-   {/* HAMBURGER */}
+   {/* MENU HAMBURGER */}
   <div 
     className={Homestyles.menuIcon}
     onClick={()=>setMenuOpen(!menuOpen)}
@@ -40,31 +40,31 @@ export default function Home() {
   </div>
 
   <ul className={`${Homestyles.navLinks} ${menuOpen ? Homestyles.activeMenu : ""}`}>
-    <li className={Homestyles.active}><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
+    <li className={Homestyles.active}><a href="#home">Accueil</a></li>
+    <li><a href="#competition">Compétitions</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-      {/* ================= HOME SECTION ================= */}
+      {/* ================= SECTION ACCUEIL ================= */}
       <section id="home" className={Homestyles.home}>
         <div className={Homestyles.homeContent}>
           
           <h1>
-            Hi, I'm <span>Thècle Nathalie</span>
+            Bonjour, je suis <span>Thècle Nathalie</span>
           </h1>
 
-          <h2>Data Analyst &  Developer FullStack JS</h2>
+          <h2>Analyste de Données & Développeuse FullStack JS</h2>
 
           <p>
-            I am a passionate and dedicated Data Scientist, Analyst,  and Web Developer,
-            driven by problem-solving and continuous learning. I build
-            intelligent data-driven solutions and scalable web applications
-            that create real business impact. I am open to new opportunities
-            where I can contribute, grow, and deliver value.
+            Je suis une Data Scientist, Analyste et Développeuse Web passionnée et dévouée,
+            animée par la résolution de problèmes et l'apprentissage continu. Je conçois
+            des solutions intelligentes basées sur les données et des applications web évolutives
+            qui génèrent un impact business réel. Je suis ouverte à de nouvelles opportunités
+            où je peux contribuer, évoluer et apporter de la valeur.
           </p>
     <div className={Homestyles.socialIcons}>
   {/* Les 3 icônes sociales principales */}
@@ -81,16 +81,16 @@ export default function Home() {
     </a>
   </div>
 
-  {/* Bouton View CV en dessous */}
+  {/* Bouton Voir CV en dessous */}
   <div className={Homestyles.viewCVContainer}>
     <a
-      href="/CV.pdf"
+      href="/CV_Nathalie.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className={Homestyles.viewCV}
     >
       <FaEye size={20} />
-      <span>View CV</span>
+      <span>Voir mon CV</span>
     </a>
   </div>
 </div>
@@ -99,7 +99,7 @@ export default function Home() {
         <div className={Homestyles.imageContainer}>
           <Image
             src="/images/myImage.png"
-            alt="Profile Photo"
+            alt="Photo de profil"
             width={400}
             height={400}
             className={Homestyles.profileImage}
@@ -108,100 +108,146 @@ export default function Home() {
       </section>
 
 
-      {/* About SECTION */}
-  <section id="about" className={styles.about}>
+      {/* SECTION COMPÉTITIONS */}
+<section id="competition" className={styles.about}>
   <div className={styles.container}>
-    
-    <div className={styles.photoWrapper}>
-      <div className={styles.photo}>
-        <Image
-          src="/images/soute.png"
-          alt="Thècle Nathalie - Data Analyst & Developer"
-          width={500}
-          height={650}
-          priority
-          className="object-cover"
-        />
-      </div>
-    </div>
 
     <div className={styles.textContent}>
+
       <h2>
-        About <span>Me</span>
+        Compétitions <span>& Distinctions</span>
       </h2>
 
-      <h3>Data Analyst & Full-Stack JavaScript Developer</h3>
-
-      <p>
-        I am a <span className={styles.highlight}>Data Analyst</span> and <span className={styles.highlight}>Full-Stack JavaScript Developer</span> with strong expertise in Angular, React, and Node.js.
+      <p className={styles.intro}>
+        Participer à des compétitions technologiques m'a permis de mettre en pratique
+        mes compétences en analyse de données, résolution de problèmes et développement
+        logiciel dans des environnements exigeants et stimulants.
       </p>
 
-      <p>
-        Passionate about turning complex data into actionable insights, I design modern, scalable, and user-centered web applications.
-      </p>
+      <div className={styles.competitionCardWrapper}>
+        {/* Image à l'extérieur de la carte - GAUCHE */}
+        <div className={styles.cardImageOutside}>
+          <div className={styles.imageGlow}></div>
+          <Image
+            src="/images/certificat.jpg"
+            alt="Excel Productivity Challenge"
+            width={320}
+            height={240}
+            className={styles.cardImgOutside}
+          />
+          <div className={styles.badge}>🥈 2ème Place</div>
+        </div>
 
-      <p>
-        Combining a sharp analytical mindset with solid technical skills, I build high-performance back-end systems, intuitive front-end interfaces, and data-driven solutions that deliver real business value.
-      </p>
+        {/* Carte texte */}
+        <div className={styles.competitionCard}>
+          <div className={styles.cardContent}>
+            <h3>Excel Productivity Challenge</h3>
+            <p>
+              Distinguée par une <span className={styles.highlight}> 2ème place</span>
+              lors de l'Ivo Egnana Tech Meeting organisé par
+              <span className={styles.highlight}> Youth Computing</span>.
+            </p>
+            <p>
+              Une compétition exigeante centrée sur l'analyse de données,
+              la logique décisionnelle et la maîtrise avancée d'Excel à travers
+              plusieurs défis chronométrés.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.competitionCardWrapper}>
+        {/* Image à l'extérieur de la carte - DROITE */}
+        <div className={styles.cardImageOutsideRight}>
+          <div className={styles.imageGlow}></div>
+          <Image
+            src="/images/shedevs.jpg"
+            alt="Hackathon Smart City"
+            width={320}
+            height={240}
+            className={styles.cardImgOutside}
+          />
+          <div className={styles.badge}>🚀 Hackathon 24h</div>
+        </div>
+
+        {/* Carte texte */}
+        <div className={styles.competitionCard}>
+          <div className={styles.cardContent}>
+            <h3>Smart City Hackathon</h3>
+            <p>
+              Participation à un hackathon intensif de
+              <span className={styles.highlight}> 24 heures</span>
+              organisé par
+              <span className={styles.highlight}> Youth Computing</span>.
+            </p>
+            <p>
+              Conception et développement d'un prototype innovant destiné à
+              contribuer à la transformation de
+              <span className={styles.highlight}> Fianarantsoa en Smart City</span>.
+              Une expérience enrichissante en développement, innovation,
+              travail d'équipe et résolution de défis réels.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <a href="#projects" className={styles.btn}>
-        Explore My Projects →
+        Découvrir mes projets →
       </a>
+
     </div>
 
   </div>
 </section>
 
-      {/* services SECTION */}
-     {/* services SECTION */}
+      {/* SECTION SERVICES */}
 <section id="services" className={serviceStyles.services}>
   <div className={serviceStyles.container}>
     
     <h1 className={serviceStyles["sub-title"]}>
-      My <span>Services</span>
+      Mes <span>Services</span>
     </h1>
 
     <div className={serviceStyles["services-list"]}>
       
-      {/* Data Analysis */}
+      {/* Analyse de Données */}
       <div className={serviceStyles["service-card"]}>
         <div className={serviceStyles.icon}>📊</div>
-        <h2>Data Analysis</h2>
+        <h2>Analyse de Données</h2>
         <p>
-          Transform raw datasets into actionable insights using modern
-          analytics tools such as Power BI, Excel and Python to help
-          businesses make data-driven decisions.
+          Transformation de données brutes en insights exploitables à l'aide d'outils d'analyse modernes
+          tels que Power BI, Excel et Python pour aider les entreprises à prendre des décisions basées sur les données.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Request a Project
+          Demander un projet
         </a>
       </div>
 
-      {/* Data Science */}
+      {/* Data Science & IA */}
       <div className={serviceStyles["service-card"]}>
         <div className={serviceStyles.icon}>🤖</div>
-        <h2>Data Science & AI</h2>
+        <h2>Data Science & IA</h2>
         <p>
-          Designing intelligent systems using Machine Learning and
-          Deep Learning models to analyze complex data and build
-          predictive solutions for real-world problems.
+          Conception de systèmes intelligents utilisant des modèles de Machine Learning et de
+          Deep Learning pour analyser des données complexes et construire des solutions
+          prédictives pour des problèmes concrets.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Start AI Project
+          Démarrer un projet IA
         </a>
       </div>
 
-      {/* Full Stack */}
+      {/* Développement Full-Stack */}
       <div className={serviceStyles["service-card"]}>
         <div className={serviceStyles.icon}>💻</div>
-        <h2>Full-Stack Development</h2>
+        <h2>Développement Full-Stack</h2>
         <p>
-          Building modern, scalable and responsive web applications
-          using Angular, Node.js and modern JavaScript frameworks
-          with a strong focus on performance and user experience.
+          Création d'applications web modernes, évolutives et responsives
+          utilisant Angular, Node.js et les frameworks JavaScript modernes
+          avec une forte attention portée à la performance et à l'expérience utilisateur.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Start a Project
+          Démarrer un projet
         </a>
       </div>
 
@@ -209,17 +255,17 @@ export default function Home() {
   </div>
 </section>
 
- {/* services Skills */}
+ {/* SECTION COMPÉTENCES */}
 <section id="skills" className={skillStyles.skillsSection}>
   <h2 className={skillStyles.skillsTitle}>
-    My <span>Skills</span>
+    Mes <span>Compétences</span>
   </h2>
 
   <div className={skillStyles.skillsContainer}>
     
     {/* DATA SCIENCE */}
     <div className={skillStyles.skillBox}>
-      <h3>Data Science & Analytics</h3>
+      <h3>Data Science & Analytique</h3>
       <div className={skillStyles.skillList}>
         <div className={skillStyles.skillItem}><FaPython /> Python</div>
         <div className={skillStyles.skillItem}> 📊 Power BI</div>
@@ -231,9 +277,9 @@ export default function Home() {
       </div>
     </div>
 
-    {/* DEVELOPMENT */}
+    {/* DÉVELOPPEMENT */}
    <div className={skillStyles.skillBox}>
-  <h3>Web & Mobile Development</h3>
+  <h3>Développement Web & Mobile</h3>
  <div className={skillStyles.skillList}>
     <div className={skillStyles.skillItem}>
       <FaNodeJs /> Node.js
@@ -254,7 +300,7 @@ export default function Home() {
       <FaCss3Alt /> CSS
     </div>
     <div className={skillStyles.skillItem}>
-      <MdDesignServices /> UI/UX Design
+      <MdDesignServices /> Design UI/UX
     </div>
   </div>
 </div>
@@ -262,28 +308,30 @@ export default function Home() {
   </div>
 </section>
 
- {/* projetcs SECTION */}
+ {/* SECTION PROJETS */}
 <section id="projects" className={projectStyles.projectsSection}>
   <h2 className={projectStyles.projectsTitle}>
-    My Projects
+    Mes Projets
   </h2>
 
-  {/* DATA PROJECTS */}
+  {/* PROJETS DATA */}
   <div className={projectStyles.projectCategory}>
-    <h3>📊 Data Analytics & Science Projects</h3>
+    <h3>📊 Projets d'Analyse de Données & Data Science</h3>
 
     <div className={projectStyles.projectsGrid}>
      <div className={`${projectStyles.projectCard} ${projectStyles.houseCard}`}>
-    <img src="/images/house_price.png" alt="Data Project" />
-    <h4>House Price Prediction (Deep Learning)</h4>
+    <a href="/images/house_price.png" target="_blank" rel="noopener noreferrer">
+      <img src="/images/house_price.png" alt="Projet Data" style={{cursor: 'pointer'}} />
+    </a>
+    <h4>Prédiction des Prix Immobiliers (Deep Learning)</h4>
     
         <p>
-        Built a deep learning model using PyTorch to predict house prices from real estate data (21,613 samples, 21 features).
-        The pipeline includes data preprocessing, feature scaling, and train/test splitting.
+        Construction d'un modèle de deep learning avec PyTorch pour prédire les prix immobiliers à partir de données immobilières (21 613 échantillons, 21 caractéristiques).
+        La pipeline inclut le prétraitement des données, la normalisation des caractéristiques et la division entraînement/test.
         
-        The neural network architecture (16 → 8 → 1 neurons with ReLU and Dropout 0.3) was trained using Adam optimizer and MSE loss over 5,000 iterations.
+        L'architecture du réseau de neurones (16 → 8 → 1 neurones avec ReLU et Dropout 0.3) a été entraînée en utilisant l'optimiseur Adam et la perte MSE sur 5 000 itérations.
         
-        Achieved strong performance with an R² score of ~0.8 on the test set. MLflow was used for experiment tracking, logging metrics, artifacts, and the trained model.
+        Obtention de performances solides avec un score R² d'environ 0,8 sur l'ensemble de test. MLflow a été utilisé pour le suivi des expériences, l'enregistrement des métriques, des artefacts et du modèle entraîné.
         </p>
 
     
@@ -297,22 +345,23 @@ export default function Home() {
 </div>
 
       <div className={projectStyles.projectCard}>
-        <img src="/images/Dashboard_ventes.png" alt="Data Project" />
-        <h4>Sales Data Analysis</h4>
+        <a href="/images/Analyse_comerciale.png" target="_blank" rel="noopener noreferrer">
+          <img src="/images/Analyse_comerciale.png" alt="Projet Data" style={{cursor: 'pointer'}} />
+        </a>
+        <h4>Analyse des Données Commerciales</h4>
         
-            <p>
-                    Developed an interactive Power BI dashboard to analyze a company's sales data for 2023. 
-                    The project involved importing, exploring, and cleaning the dataset, then visualizing key metrics such as total revenue, quantity sold, number of orders, and sales trends by product, category, and region. 
-                    The dashboard provides actionable insights into business performance and highlights top-selling products and seasonal trends.
+             <p>
+    Réalisation d'une analyse des données commerciales et développement d'un tableau de bord interactif Excel pour suivre les indicateurs clés de performance (KPI), incluant le chiffre d'affaires total, le coût d'achat, la marge bénéficiaire et le nombre de clients.
+    Le projet a inclus la collecte, le nettoyage et la transformation des données, ainsi que la création de rapports dynamiques et de visualisations pour analyser les performances commerciales par produit, catégorie et région.
             </p>
     
         
         <div className={projectStyles.techStack}>
-           Power BI • DAX • Power Query
+           Excel • DAX • Power Query • Power Pivot
         </div>
         <div className={projectStyles.projectButtons}>
           <a href="https://github.com/A-Thecle/Sales-Data-Analysis-2023"><FaGithub className={projectStyles.icon}/>GitHub</a>
-          <a href="/Dashboard_ventes .pdf" target="_blank" rel="noopener noreferrer"><FaFilePdf className={projectStyles.icon}/>.pdf</a> 
+          
         </div>
       </div>
 
@@ -321,35 +370,39 @@ export default function Home() {
       
 
     <div className={projectStyles.seeAll}>
-      <a href="/projects/data">See All Data Projects →</a>
+      <a href="/projects/data">Voir tous les projets Data →</a>
     </div>
   </div>
 
-  {/* WEB & MOBILE PROJECTS */}
+  {/* PROJETS WEB & MOBILE */}
   <div className={projectStyles.projectCategory}>
-    <h3>💻 Web & Mobile Development</h3>
+    <h3>💻 Développement Web & Mobile</h3>
 
     <div className={projectStyles.projectsGrid}>
       <div className={projectStyles.projectCard}>
-        <img src="/images/innov.png" alt="Web Project" />
-        <h4>Digital Services Order Management Application for company INNOV-T</h4>
+        <a href="/images/innov.png" target="_blank" rel="noopener noreferrer">
+          <img src="/images/innov.png" alt="Projet Web" style={{cursor: 'pointer'}} />
+        </a>
+        <h4>Application de Gestion de Commandes de Services Numériques pour l'entreprise INNOV-T</h4>
         <p>
-          Developed a professional online platform that allows clients to order digital services such as website creation, graphic design, and other digital solutions. The application includes secure authentication, an intuitive dashboard, and real-time project progress tracking to ensure a smooth and transparent client experience.
+          Développement d'une plateforme professionnelle en ligne permettant aux clients de commander des services numériques tels que la création de sites web, le design graphique et d'autres solutions digitales. L'application inclut une authentification sécurisée, un tableau de bord intuitif et un suivi de l'avancement des projets en temps réel pour garantir une expérience client fluide et transparente.
         </p>
         <div className={projectStyles.techStack}>
           Angular.js • Nest.js • MySQL
         </div>
         <div className={projectStyles.projectButtons}>
           <a href="https://github.com/A-Thecle/gestion_de_projets_et_commandes_de_services_numerique"><FaGithub className={projectStyles.icon}/>GitHub</a>
-          <a href="https://youtu.be/HwtGe_TCxcM"><FaYoutube className={projectStyles.icon}/>Live Demo</a>
+          <a href="https://youtu.be/HwtGe_TCxcM"><FaYoutube className={projectStyles.icon}/>Démo en direct</a>
         </div>
       </div>
 
       <div className={projectStyles.projectCard}>
-        <img src="/images/fermes1.png" alt="Web Project" />
-        <h4>Farm Management Application</h4>
+        <a href="/images/fermes1.png" target="_blank" rel="noopener noreferrer">
+          <img src="/images/fermes1.png" alt="Projet Web" style={{cursor: 'pointer'}} />
+        </a>
+        <h4>Application de Gestion d'Exploitation Agricole</h4>
         <p>
-          Developed a comprehensive farm management platform that enables efficient monitoring of livestock, vaccination schedules, product sales, and animal feeding operations. The system helps streamline farm activities and improve overall productivity through organized data tracking and management.
+          Développement d'une plateforme complète de gestion agricole permettant un suivi efficace du bétail, des calendriers de vaccination, des ventes de produits et des opérations d'alimentation animale. Le système aide à rationaliser les activités agricoles et à améliorer la productivité globale grâce à un suivi et une gestion organisés des données.
         </p>
         <div className={projectStyles.techStack}>
           Angular.js • Express.js • MySQL
@@ -358,7 +411,7 @@ export default function Home() {
           <a href="https://github.com/A-Thecle/Gestion_De_Ferme"  
           target="_blank" 
           rel="noopener noreferrer"><FaGithub className={projectStyles.icon}/>GitHub</a>
-          <a href="https://youtu.be/5PlJVJZ1xbU"><FaYoutube className={projectStyles.icon}/>Live Demo</a>
+          <a href="https://youtu.be/5PlJVJZ1xbU"><FaYoutube className={projectStyles.icon}/>Démo en direct</a>
         </div>
       </div>
 
@@ -368,27 +421,27 @@ export default function Home() {
     
 
     <div className={projectStyles.seeAll}>
-      <a href="/projects">See All Web Projects →</a>
+      <a href="/projects">Voir tous les projets Web →</a>
     </div>
   </div>
 </section>
 
 
-  {/* CONTACT SECTION */}
+  {/* SECTION CONTACT */}
       <section id="contact" className={contactStyles.contact}>
         
-        {/* LEFT SIDE */}
+        {/* PARTIE GAUCHE */}
         <div className={contactStyles.contactText}>
           <h2>
-            Contact <span>Me</span>
+            Contactez <span>Moi</span>
           </h2>
 
-          <h4>Let's Build Something Great Together</h4>
+          <h4>Construisons Ensemble Quelque Chose de Grand</h4>
 
           <p>
-            Have a project idea, collaboration, or opportunity?
-            I would love to hear from you. Feel free to reach out
-            and let’s create something impactful together.
+            Vous avez une idée de projet, une collaboration ou une opportunité ?
+            Je serais ravie d'échanger avec vous. N'hésitez pas à me contacter
+            et créons ensemble quelque chose d'impactant.
           </p>
 
           <div className={contactStyles.contactInfo}>
@@ -446,7 +499,7 @@ export default function Home() {
       
  </div>
 
-        {/* RIGHT SIDE FORM */}
+        {/* PARTIE DROITE - FORMULAIRE */}
         <ContactForm />
 
       </section>
