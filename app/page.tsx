@@ -50,145 +50,226 @@ export default function Home() {
 </nav>
 
       {/* ================= SECTION ACCUEIL ================= */}
-      <section id="home" className={Homestyles.home}>
-        <div className={Homestyles.homeContent}>
-          
-          <h1>
-            Bonjour, je suis <span>Thècle Nathalie</span>
-          </h1>
+<section id="home" className={Homestyles.home}>
 
-          <h2>Analyste de Données & Développeuse FullStack JS</h2>
-
-          <p>
-            Je suis une Data Scientist, Analyste et Développeuse Web passionnée et dévouée,
-            animée par la résolution de problèmes et l'apprentissage continu. Je conçois
-            des solutions intelligentes basées sur les données et des applications web évolutives
-            qui génèrent un impact business réel. Je suis ouverte à de nouvelles opportunités
-            où je peux contribuer, évoluer et apporter de la valeur.
-          </p>
-    <div className={Homestyles.socialIcons}>
-  {/* Les 3 icônes sociales principales */}
-  <div className={Homestyles.topIcons}>
-    <a
-      href="https://www.linkedin.com/in/th%C3%A8cle-nathalie-ramanampamonjy-03897b355" target="_blank" rel="noopener noreferrer">
-      <FaLinkedin size={24} />
-    </a>
-    <a  href="https://github.com/A-Thecle" target="_blank"  rel="noopener noreferrer" >
-      <FaGithub size={24} />
-    </a>
-    <a href="https://www.facebook.com/thecle.nathalie.3/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
-      <FaFacebook size={24} />
-    </a>
+  {/* Formes flottantes en arrière-plan */}
+  <div className={Homestyles.bgShapes}>
+    <span className={Homestyles.shape1}></span>
+    <span className={Homestyles.shape2}></span>
+    <span className={Homestyles.shape3}></span>
   </div>
 
-  {/* Bouton Voir CV en dessous */}
-  <div className={Homestyles.viewCVContainer}>
-    <a
-      href="/CV_Nathalie.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={Homestyles.viewCV}
-    >
-      <FaEye size={20} />
-      <span>Voir mon CV</span>
-    </a>
+  <div className={Homestyles.homeContent}>
+
+    {/* Badge disponibilité */}
+    <div className={Homestyles.statusBadge}>
+      <span className={Homestyles.statusDot}></span>
+      Disponible pour de nouvelles opportunités
+    </div>
+
+    <h1 className={Homestyles.fadeIn1}>
+      Bonjour, je suis <span>Nathalie</span>
+    </h1>
+
+    <h2 className={Homestyles.fadeIn2}>Data Scientist & Data Analyst</h2>
+
+    <p className={Homestyles.fadeIn3}>
+      Je suis une Data Scientist, Analyste passionnée et dévouée,
+      animée par la résolution de problèmes et l'apprentissage continu. Je conçois
+      des solutions intelligentes basées sur les données et des applications web évolutives
+      qui génèrent un impact business réel. Je suis ouverte à de nouvelles opportunités
+      où je peux contribuer, évoluer et apporter de la valeur.
+    </p>
+
+    <div className={`${Homestyles.socialIcons} ${Homestyles.fadeIn4}`}>
+      <div className={Homestyles.topIcons}>
+        <a href="https://www.linkedin.com/in/th%C3%A8cle-nathalie-ramanampamonjy-03897b355" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={24} />
+        </a>
+        <a href="https://github.com/A-Thecle" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={24} />
+        </a>
+        <a href="https://www.facebook.com/thecle.nathalie.3/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+          <FaFacebook size={24} />
+        </a>
+      </div>
+
+      <div className={Homestyles.viewCVContainer}>
+        <a
+          href="/CV_Nathalie.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={Homestyles.viewCV}
+        >
+          <FaEye size={20} />
+          <span>Voir mon CV</span>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-        </div>
 
-        <div className={Homestyles.imageContainer}>
-          <Image
-            src="/images/myImage.png"
-            alt="Photo de profil"
-            width={400}
-            height={400}
-            className={Homestyles.profileImage}
-          />
-        </div>
-      </section>
+  <div className={Homestyles.imageContainer}>
+    <div className={Homestyles.imageRing}>
+      <Image
+        src="/images/myImage.png"
+        alt="Photo de profil"
+        width={400}
+        height={400}
+        className={Homestyles.profileImage}
+      />
+    </div>
+  </div>
+
+  {/* Indicateur de scroll */}
+  <div className={Homestyles.scrollIndicator}>
+    <span className={Homestyles.scrollText}>Scroll</span>
+    <div className={Homestyles.scrollWheel}>
+      <span className={Homestyles.scrollDot}></span>
+    </div>
+  </div>
+
+</section>
 
 
-      {/* SECTION COMPÉTITIONS */}
+    
+
+{/* SECTION COMPÉTITIONS */}
+{/* SECTION COMPÉTITIONS */}
 <section id="competition" className={styles.about}>
   <div className={styles.container}>
-
     <div className={styles.textContent}>
 
-      <h2>
+      <h2 className={styles.sectionTitle}>
         Compétitions <span>& Distinctions</span>
       </h2>
 
       <p className={styles.intro}>
         Participer à des compétitions technologiques m'a permis de mettre en pratique
-        mes compétences en analyse de données, résolution de problèmes et développement
-        logiciel dans des environnements exigeants et stimulants.
+        mes compétences en analyse de données, intelligence artificielle,
+        développement logiciel et résolution de problèmes dans des environnements
+        exigeants et stimulants.
       </p>
 
-      <div className={styles.competitionCardWrapper}>
-        {/* Image à l'extérieur de la carte - GAUCHE */}
-        <div className={styles.cardImageOutside}>
-          <div className={styles.imageGlow}></div>
-          <Image
-            src="/images/certificat.jpg"
-            alt="Excel Productivity Challenge"
-            width={320}
-            height={240}
-            className={styles.cardImgOutside}
-          />
-          <div className={styles.badge}>🥈 2ème Place</div>
-        </div>
+      <div className={styles.timeline}>
 
-        {/* Carte texte */}
-        <div className={styles.competitionCard}>
-          <div className={styles.cardContent}>
-            <h3>Excel Productivity Challenge</h3>
-            <p>
-              Distinguée par une <span className={styles.highlight}> 2ème place</span>
-              lors de l'Ivo Egnana Tech Meeting organisé par
-              <span className={styles.highlight}> Youth Computing</span>.
-            </p>
-            <p>
-              Une compétition exigeante centrée sur l'analyse de données,
-              la logique décisionnelle et la maîtrise avancée d'Excel à travers
-              plusieurs défis chronométrés.
-            </p>
+        {/* 01 — EXCEL PRODUCTIVITY */}
+        <div className={`${styles.timelineItem} ${styles.left}`}>
+          <div className={styles.timelineNode}>01</div>
+          <div className={styles.timelineCard}>
+            <div className={styles.medallion}>
+              <Image
+                src="/images/certificat.jpg"
+                alt="Excel Productivity Challenge"
+                width={180}
+                height={180}
+                className={styles.medallionImg}
+              />
+              <span className={styles.medallionBadge}>🥈</span>
+            </div>
+            <div className={styles.timelineText}>
+              <span className={styles.timelinePlace}>2ème Place</span>
+              <h3>Excel Productivity Challenge</h3>
+              <p>
+                Distinguée lors de l'Ivo Egnana Tech Meeting organisé par
+                <span className={styles.highlight}> Youth Computing</span>.
+              </p>
+              <p>
+                Une compétition exigeante centrée sur l'analyse de données,
+                la logique décisionnelle et la maîtrise avancée d'Excel.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles.competitionCardWrapper}>
-        {/* Image à l'extérieur de la carte - DROITE */}
-        <div className={styles.cardImageOutsideRight}>
-          <div className={styles.imageGlow}></div>
-          <Image
-            src="/images/shedevs.jpg"
-            alt="Hackathon Smart City"
-            width={320}
-            height={240}
-            className={styles.cardImgOutside}
-          />
-          <div className={styles.badge}>🚀 Hackathon 24h</div>
-        </div>
-
-        {/* Carte texte */}
-        <div className={styles.competitionCard}>
-          <div className={styles.cardContent}>
-            <h3>Smart City Hackathon</h3>
-            <p>
-              Participation à un hackathon intensif de
-              <span className={styles.highlight}> 24 heures</span>
-              organisé par
-              <span className={styles.highlight}> Youth Computing</span>.
-            </p>
-            <p>
-              Conception et développement d'un prototype innovant destiné à
-              contribuer à la transformation de
-              <span className={styles.highlight}> Fianarantsoa en Smart City</span>.
-              Une expérience enrichissante en développement, innovation,
-              travail d'équipe et résolution de défis réels.
-            </p>
+        
+        {/* 03 — CIRT MDG */}
+        <div className={`${styles.timelineItem} ${styles.right}`}>
+          <div className={styles.timelineNode}>02</div>
+          <div className={styles.timelineCard}>
+            <div className={styles.medallion}>
+              <Image
+                src="/images/CTF.jpg"
+                alt="Symposium National de la Cybersécurité"
+                width={180}
+                height={180}
+                className={styles.medallionImg}
+              />
+              <span className={styles.medallionBadge}>🏆</span>
+            </div>
+            <div className={styles.timelineText}>
+              <span className={styles.timelinePlace}>Prix de la Mixité</span>
+              <h3>Symposium National de la Cybersécurité</h3>
+              <p>
+                Lauréate lors du Symposium organisé par <span className={styles.highlight}>CIRT-MDG</span>.
+              </p>
+              <p>
+                Challenge de <span className={styles.highlight}>24h</span> : application intelligente pour
+                <span className={styles.highlight}> l'agriculture à Madagascar</span> — détection des maladies du
+                <span className={styles.highlight}> riz, manioc et maïs</span>.
+              </p>
+            </div>
           </div>
         </div>
+
+        {/* 03 — SMART CITY */}
+        <div className={`${styles.timelineItem} ${styles.left}`}>
+          <div className={styles.timelineNode}>03</div>
+          <div className={styles.timelineCard}>
+            <div className={styles.medallion}>
+              <Image
+                src="/images/shedevs.jpg"
+                alt="Smart City Hackathon"
+                width={180}
+                height={180}
+                className={styles.medallionImg}
+              />
+              <span className={styles.medallionBadge}>🚀</span>
+            </div>
+            <div className={styles.timelineText}>
+              <span className={styles.timelinePlace}>Hackathon 24h</span>
+              <h3>Smart City Hackathon</h3>
+              <p>
+                Hackathon intensif de <span className={styles.highlight}>24 heures</span> organisé par
+                <span className={styles.highlight}> Youth Computing</span>.
+              </p>
+              <p>
+                Conception d'un prototype pour la transformation de
+                <span className={styles.highlight}> Fianarantsoa en Smart City</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        {/* 04 — HACKATHON ENI */}
+        <div className={`${styles.timelineItem} ${styles.right}`}>
+          <div className={styles.timelineNode}>04</div>
+          <div className={styles.timelineCard}>
+            <div className={styles.medallion}>
+              <Image
+                src="/images/Ako.jpg"
+                alt="Hackathon interne ENI Fianarantsoa"
+                width={180}
+                height={180}
+                className={styles.medallionImg}
+              />
+              <span className={styles.medallionBadge}>🏆</span>
+            </div>
+            <div className={styles.timelineText}>
+              <span className={styles.timelinePlace}>Top 6 / 14 équipes</span>
+              <h3>Hackathon interne — ENI Fianarantsoa</h3>
+              <p>
+                Participation au <span className={styles.highlight}>Dev Hunt</span>, organisé par
+                <span className={styles.highlight}> l&apos;ENI Fianarantsoa</span>.
+              </p>
+              <p>
+                Solution développée en <span className={styles.highlight}>24h</span> pour motiver les étudiants
+                à poursuivre leurs projets.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <a href="#projects" className={styles.btn}>
@@ -196,11 +277,11 @@ export default function Home() {
       </a>
 
     </div>
-
   </div>
 </section>
 
-      {/* SECTION SERVICES */}
+
+{/* SECTION SERVICES */}
 <section id="services" className={serviceStyles.services}>
   <div className={serviceStyles.container}>
     
@@ -212,6 +293,7 @@ export default function Home() {
       
       {/* Analyse de Données */}
       <div className={serviceStyles["service-card"]}>
+        <span className={serviceStyles.number}>01</span>
         <div className={serviceStyles.icon}>📊</div>
         <h2>Analyse de Données</h2>
         <p>
@@ -219,12 +301,13 @@ export default function Home() {
           tels que Power BI, Excel et Python pour aider les entreprises à prendre des décisions basées sur les données.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Demander un projet
+          Demander un projet <span className={serviceStyles.arrow}>→</span>
         </a>
       </div>
 
       {/* Data Science & IA */}
       <div className={serviceStyles["service-card"]}>
+        <span className={serviceStyles.number}>02</span>
         <div className={serviceStyles.icon}>🤖</div>
         <h2>Data Science & IA</h2>
         <p>
@@ -233,12 +316,13 @@ export default function Home() {
           prédictives pour des problèmes concrets.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Démarrer un projet IA
+          Démarrer un projet IA <span className={serviceStyles.arrow}>→</span>
         </a>
       </div>
 
       {/* Développement Full-Stack */}
       <div className={serviceStyles["service-card"]}>
+        <span className={serviceStyles.number}>03</span>
         <div className={serviceStyles.icon}>💻</div>
         <h2>Développement Full-Stack</h2>
         <p>
@@ -247,63 +331,66 @@ export default function Home() {
           avec une forte attention portée à la performance et à l'expérience utilisateur.
         </p>
         <a href="#contact" className={serviceStyles.read}>
-          Démarrer un projet
+          Démarrer un projet <span className={serviceStyles.arrow}>→</span>
         </a>
       </div>
 
     </div>
   </div>
 </section>
-
- {/* SECTION COMPÉTENCES */}
+{/* SECTION COMPÉTENCES */}
 <section id="skills" className={skillStyles.skillsSection}>
   <h2 className={skillStyles.skillsTitle}>
     Mes <span>Compétences</span>
   </h2>
 
   <div className={skillStyles.skillsContainer}>
-    
-    {/* DATA SCIENCE */}
-    <div className={skillStyles.skillBox}>
-      <h3>Data Science & Analytique</h3>
-      <div className={skillStyles.skillList}>
-        <div className={skillStyles.skillItem}><FaPython /> Python</div>
-        <div className={skillStyles.skillItem}> 📊 Power BI</div>
-        <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Machine Learning</div>
-        <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Deep Learning</div>
-        <div className={skillStyles.skillItem}><SiTensorflow />PyTorch</div>
-        <div className={skillStyles.skillItem}>📊 Excel</div>
-        <div className={skillStyles.skillItem}>⚡ Power Query</div>
+
+    {/* LIGNE 1 : DATA SCIENCE - défile de gauche à droite */}
+    <div className={skillStyles.skillGroupWrapper}>
+      <h3 className={skillStyles.skillRowTitle}>
+        Compétences en <span>Data Analyste & Scientist</span>
+      </h3>
+      <div className={skillStyles.marqueeRow}>
+        <div className={`${skillStyles.marqueeTrack} ${skillStyles.moveRight}`}>
+          {[...Array(2)].map((_, i) => (
+            <div className={skillStyles.marqueeGroup} key={i}>
+              <div className={skillStyles.skillItem}><FaPython /> Python</div>
+              <div className={skillStyles.skillItem}>📊 Power BI</div>
+              <div className={skillStyles.skillItem}>🗄️ MySQL</div>
+              <div className={skillStyles.skillItem}>🍃 MongoDB</div>
+              <div className={skillStyles.skillItem}>📊 Excel</div>
+              <div className={skillStyles.skillItem}>⚡ Power Query</div>
+              <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Machine Learning</div>
+              <div className={skillStyles.skillItem}><GiArtificialIntelligence /> Deep Learning</div>
+              <div className={skillStyles.skillItem}><SiTensorflow /> PyTorch</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
 
-    {/* DÉVELOPPEMENT */}
-   <div className={skillStyles.skillBox}>
-  <h3>Développement Web & Mobile</h3>
- <div className={skillStyles.skillList}>
-    <div className={skillStyles.skillItem}>
-      <FaNodeJs /> Node.js
+    {/* LIGNE 2 : DÉVELOPPEMENT - défile de droite à gauche */}
+    <div className={skillStyles.skillGroupWrapper}>
+      <h3 className={skillStyles.skillRowTitle}>
+        Compétences en <span>Développement Web & Mobile</span>
+      </h3>
+      <div className={skillStyles.marqueeRow}>
+        <div className={`${skillStyles.marqueeTrack} ${skillStyles.moveLeft}`}>
+          {[...Array(2)].map((_, i) => (
+            <div className={skillStyles.marqueeGroup} key={i}>
+              <div className={skillStyles.skillItem}><FaNodeJs /> Node.js</div>
+              <div className={skillStyles.skillItem}><FaAngular /> Angular</div>
+              <div className={skillStyles.skillItem}><SiNextdotjs /> Next.js</div>
+              <div className={skillStyles.skillItem}><SiFlutter /> Flutter</div>
+              <div className={skillStyles.skillItem}><FaHtml5 /> HTML</div>
+              <div className={skillStyles.skillItem}><FaCss3Alt /> CSS</div>
+              <div className={skillStyles.skillItem}><MdDesignServices /> Design UI/UX</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-     <div className={skillStyles.skillItem}>
-      <FaAngular /> Angular
-    </div>
-      <div className={skillStyles.skillItem}>
-      <SiNextdotjs /> Next.js
-    </div>
-    <div className={skillStyles.skillItem}>
-      <SiFlutter /> Flutter
-    </div>
-    <div className={skillStyles.skillItem}>
-      <FaHtml5 /> HTML
-    </div>
-  <div className={skillStyles.skillItem}>
-      <FaCss3Alt /> CSS
-    </div>
-    <div className={skillStyles.skillItem}>
-      <MdDesignServices /> Design UI/UX
-    </div>
-  </div>
-</div>
 
   </div>
 </section>
