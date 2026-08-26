@@ -432,25 +432,41 @@ export default function Home() {
 </div>
 
       <div className={projectStyles.projectCard}>
-        <a href="/images/Analyse_comerciale.png" target="_blank" rel="noopener noreferrer">
-          <img src="/images/Analyse_comerciale.png" alt="Projet Data" style={{cursor: 'pointer'}} />
-        </a>
-        <h4>Analyse des Données Commerciales</h4>
-        
-             <p>
-    Réalisation d'une analyse des données commerciales et développement d'un tableau de bord interactif Excel pour suivre les indicateurs clés de performance (KPI), incluant le chiffre d'affaires total, le coût d'achat, la marge bénéficiaire et le nombre de clients.
-    Le projet a inclus la collecte, le nettoyage et la transformation des données, ainsi que la création de rapports dynamiques et de visualisations pour analyser les performances commerciales par produit, catégorie et région.
-            </p>
-    
-        
-        <div className={projectStyles.techStack}>
-           Excel • DAX • Power Query • Power Pivot
-        </div>
-        <div className={projectStyles.projectButtons}>
-          <a href="https://github.com/A-Thecle/Analyse-commerciale.git"><FaGithub className={projectStyles.icon}/>GitHub</a>
-          
-        </div>
-      </div>
+  <a href="/images/RH1.png" target="_blank" rel="noopener noreferrer">
+    <img
+      src="/images/RH1.png"
+      alt="Analyse RH - Rémunération et Performance des Employés"
+      style={{ cursor: 'pointer' }}
+    />
+  </a>
+
+  <h4>Analyse RH – Rémunération et Performance des Employés</h4>
+
+  <p>
+    Réalisation d'une analyse globale des ressources humaines à travers
+    l'étude de la rémunération, de la performance et des principaux
+    indicateurs RH. Développement d'un tableau de bord interactif Power BI
+    permettant d'analyser les effectifs, les salaires, la performance
+    annuelle, les jours de congé, l'ancienneté, les départements, les postes,
+    les localisations et les statuts de contrat.
+    Le projet a inclus la préparation, le nettoyage et la transformation
+    des données, ainsi que la création de KPI, de visualisations interactives
+    et d'analyses croisées afin d'identifier les écarts de rémunération,
+    les tendances de performance et les principaux indicateurs de gestion
+    des ressources humaines.
+  </p>
+
+  <div className={projectStyles.techStack}>
+    Power BI • DAX • Power Query
+  </div>
+
+  <div className={projectStyles.projectButtons}>
+    <a href="https://github.com/A-Thecle/Analyse_RessourcesHumaines">
+      <FaGithub className={projectStyles.icon} />
+      GitHub
+    </a>
+  </div>
+</div>
 
     </div>
       
