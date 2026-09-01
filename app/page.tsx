@@ -83,7 +83,7 @@ export default function Home() {
 
     <div className={`${Homestyles.socialIcons} ${Homestyles.fadeIn4}`}>
       <div className={Homestyles.topIcons}>
-        <a href="https://www.linkedin.com/in/th%C3%A8cle-nathalie-ramanampamonjy-03897b355" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/thècle-nathalie-916244433" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
         </a>
         <a href="https://github.com/A-Thecle" target="_blank" rel="noopener noreferrer">
@@ -111,7 +111,7 @@ export default function Home() {
   <div className={Homestyles.imageContainer}>
     <div className={Homestyles.imageRing}>
       <Image
-        src="/images/myImage.png"
+        src="/images/Nathalie.jpg"
         alt="Photo de profil"
         width={400}
         height={400}
@@ -564,7 +564,7 @@ export default function Home() {
   <div className={contactStyles.socialLinks}>
     
     <a
-      href="https://www.linkedin.com/in/th%C3%A8cle-nathalie-ramanampamonjy-03897b355"
+      href="https://www.linkedin.com/in/thècle-nathalie-916244433"
       target="_blank"
       rel="noopener noreferrer"
       className={contactStyles.socialItem}
