@@ -430,43 +430,43 @@ export default function Home() {
     {/* <a href="#">Live Demo</a> */}
     </div>
 </div>
-
-      <div className={projectStyles.projectCard}>
-  <a href="/images/RH1.png" target="_blank" rel="noopener noreferrer">
+<div className={projectStyles.projectCard}>
+  <a href="/images/Ecommerce.png" target="_blank" rel="noopener noreferrer">
     <img
-      src="/images/RH1.png"
-      alt="Analyse RH - Rémunération et Performance des Employés"
+      src="/images/e-commerce.png"
+      alt="Dashboard Power BI - Analyse de la performance e-commerce"
       style={{ cursor: 'pointer' }}
     />
   </a>
 
-  <h4>Analyse RH – Rémunération et Performance des Employés</h4>
+  <h4>Analyse de la Performance E-commerce</h4>
 
   <p>
-    Réalisation d'une analyse globale des ressources humaines à travers
-    l'étude de la rémunération, de la performance et des principaux
-    indicateurs RH. Développement d'un tableau de bord interactif Power BI
-    permettant d'analyser les effectifs, les salaires, la performance
-    annuelle, les jours de congé, l'ancienneté, les départements, les postes,
-    les localisations et les statuts de contrat.
-    Le projet a inclus la préparation, le nettoyage et la transformation
-    des données, ainsi que la création de KPI, de visualisations interactives
-    et d'analyses croisées afin d'identifier les écarts de rémunération,
-    les tendances de performance et les principaux indicateurs de gestion
-    des ressources humaines.
-  </p>
+  Analyse d’un dataset e-commerce de <strong>42 047 lignes et 25 variables</strong>
+  pour évaluer la performance commerciale, la rentabilité et la logistique.
+  Le projet comprend une <strong>Vue générale de la performance commerciale</strong>
+  (CA, ventes et performances par région) ainsi qu’une
+  <strong>Analyse de la performance logistique et de la rentabilité</strong>
+  (délais de livraison, types d’expédition, remises, profit, marge et
+  rentabilité par produit et segment client).
+  Préparation et transformation des données avec <strong>Power Query</strong>,
+  création de <strong>KPI et mesures DAX</strong> et réalisation de visualisations
+  interactives pour faciliter la prise de décision.
+</p>
+
 
   <div className={projectStyles.techStack}>
-    Power BI • DAX • Power Query
+    Power BI • DAX • Power Query • Data Analysis
   </div>
 
   <div className={projectStyles.projectButtons}>
-    <a href="https://github.com/A-Thecle/Analyse_RessourcesHumaines">
+    <a href="https://github.com/A-Thecle/Analyse-e-commerce">
       <FaGithub className={projectStyles.icon} />
       GitHub
     </a>
   </div>
 </div>
+
 
     </div>
       

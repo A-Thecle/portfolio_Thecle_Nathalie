@@ -101,6 +101,42 @@ export default function DataProjectsPage() {
              
             </div>
           </div>
+            <div className={dataStyles.projectCard}>
+            <a href="/images/RH1.png" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/RH1.png"
+                alt="Analyse RH - Rémunération et Performance des Employés"
+                style={{ cursor: 'pointer' }}
+              />
+            </a>
+          
+            <h4>Analyse RH – Rémunération et Performance des Employés</h4>
+          
+            <p>
+              Réalisation d'une analyse globale des ressources humaines à travers
+              l'étude de la rémunération, de la performance et des principaux
+              indicateurs RH. Développement d'un tableau de bord interactif Power BI
+              permettant d'analyser les effectifs, les salaires, la performance
+              annuelle, les jours de congé, l'ancienneté, les départements, les postes,
+              les localisations et les statuts de contrat.
+              Le projet a inclus la préparation, le nettoyage et la transformation
+              des données, ainsi que la création de KPI, de visualisations interactives
+              et d'analyses croisées afin d'identifier les écarts de rémunération,
+              les tendances de performance et les principaux indicateurs de gestion
+              des ressources humaines.
+            </p>
+          
+            <div className={dataStyles.techStack}>
+              Power BI • DAX • Power Query
+            </div>
+          
+            <div className={dataStyles.projectButtons}>
+              <a href="https://github.com/A-Thecle/Analyse_RessourcesHumaines">
+                <FaGithub className={dataStyles.icon} />
+                GitHub
+              </a>
+            </div>
+          </div>
 
             <div className={dataStyles.projectCard}>
             <a href="/images/Dashboard_ventes.png" target="_blank" rel="noopener noreferrer">
