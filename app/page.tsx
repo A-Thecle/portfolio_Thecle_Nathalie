@@ -111,7 +111,7 @@ export default function Home() {
   <div className={Homestyles.imageContainer}>
     <div className={Homestyles.imageRing}>
       <Image
-        src="/images/nathalie.jpg"
+        src="/images/nathanatha.jpg"
         alt="Photo de profil"
         width={400}
         height={400}
