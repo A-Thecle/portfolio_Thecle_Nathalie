@@ -223,6 +223,45 @@ export default function DataProjectsPage() {
         <h3>🤖 Data Science</h3>
 
         <div className={dataStyles.horizontalScroll}>
+          id="6jrj0u"
+<div className={dataStyles.projectCard}>
+  <a href="/images/house_price.png" target="_blank" rel="noopener noreferrer">
+    <img
+      src="/images/house_price.png"
+      alt="Projet Data Science"
+      style={{cursor: 'pointer'}}
+    />
+  </a>
+
+  <h4>Prédiction des Prix Immobiliers (Deep Learning)</h4>
+
+  <p>
+    Construction d'un modèle de deep learning avec PyTorch pour prédire les prix
+    immobiliers à partir de données immobilières (21 613 échantillons,
+    21 caractéristiques).
+
+    La pipeline inclut le prétraitement des données, la normalisation des
+    caractéristiques et la division entraînement/test.
+
+    L'architecture du réseau de neurones (16 → 8 → 1 neurones avec ReLU et
+    Dropout 0.3) a été entraînée en utilisant l'optimiseur Adam et la perte MSE
+    sur 5 000 itérations.
+
+    Obtention de performances solides avec un score R² d'environ 0,8 sur
+    l'ensemble de test. MLflow a été utilisé pour le suivi des expériences,
+    l'enregistrement des métriques, des artefacts et du modèle entraîné.
+  </p>
+
+  <div className={dataStyles.tech}>
+    Python • PyTorch • MLflow • Scikit-Learn • Pandas • NumPy • Matplotlib
+  </div>
+
+  <div className={dataStyles.buttons}>
+    <a href="https://github.com/your-username/house-price-project">
+      <FaGithub className={dataStyles.icon}/> GitHub
+    </a>
+  </div>
+</div>
 
           <div className={dataStyles.projectCard}>
             <a href="/images/student.png" target="_blank" rel="noopener noreferrer">

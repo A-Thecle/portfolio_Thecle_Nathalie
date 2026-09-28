@@ -111,7 +111,7 @@ export default function Home() {
   <div className={Homestyles.imageContainer}>
     <div className={Homestyles.imageRing}>
       <Image
-        src="/images/Nathalie.jpg"
+        src="/images/nathalie.jpg"
         alt="Photo de profil"
         width={400}
         height={400}
@@ -406,30 +406,53 @@ export default function Home() {
     <h3>📊 Projets d'Analyse de Données & Data Science</h3>
 
     <div className={projectStyles.projectsGrid}>
-     <div className={`${projectStyles.projectCard} ${projectStyles.houseCard}`}>
-    <a href="/images/house_price.png" target="_blank" rel="noopener noreferrer">
-      <img src="/images/house_price.png" alt="Projet Data" style={{cursor: 'pointer'}} />
-    </a>
-    <h4>Prédiction des Prix Immobiliers (Deep Learning)</h4>
-    
-        <p>
-        Construction d'un modèle de deep learning avec PyTorch pour prédire les prix immobiliers à partir de données immobilières (21 613 échantillons, 21 caractéristiques).
-        La pipeline inclut le prétraitement des données, la normalisation des caractéristiques et la division entraînement/test.
-        
-        L'architecture du réseau de neurones (16 → 8 → 1 neurones avec ReLU et Dropout 0.3) a été entraînée en utilisant l'optimiseur Adam et la perte MSE sur 5 000 itérations.
-        
-        Obtention de performances solides avec un score R² d'environ 0,8 sur l'ensemble de test. MLflow a été utilisé pour le suivi des expériences, l'enregistrement des métriques, des artefacts et du modèle entraîné.
-        </p>
+   
+<div className={projectStyles.projectCard}>
+  <a
+    href="/images/interfaceNLP.png"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/interfaceNLP.png"
+      alt="Projet NLP - Analyse de sentiments des avis de films"
+      style={{ cursor: 'pointer' }}
+    />
+  </a>
 
-    
-    <div className={projectStyles.techStack}>
-      Python • PyTorch • MLflow • Scikit-learn • Pandas • Numpy • Matplotlib
-    </div>
-    <div className={projectStyles.projectButtons}>
-     <a href="https://github.com/your-username/house-price-project"><FaGithub className={projectStyles.icon}/> GitHub</a>
-    {/* <a href="#">Live Demo</a> */}
-    </div>
+  <h4>Analyse de Sentiments - NLP</h4>
+
+  <p>
+    Développement d’un modèle de <strong>classification de sentiments</strong>
+    appliqué à des avis de films afin d’identifier automatiquement les
+    opinions <strong>positives ou négatives</strong>. Le projet comprend le
+    <strong>nettoyage et le prétraitement des textes</strong>, la suppression
+    des stopwords, l’exploration des données avec des
+    <strong>WordClouds</strong>, ainsi que la représentation des textes avec
+    <strong>TF-IDF</strong>. Plusieurs modèles de Machine Learning ont été
+    entraînés et comparés : <strong>Naive Bayes, Régression Logistique et
+    SVM linéaire</strong>. Les performances sont évaluées avec
+    l’accuracy, le precision, le recall, le F1-score et la matrice de
+    confusion. Une fonction de prédiction permet également d’analyser de
+    nouveaux avis avec un score de confiance.
+  </p>
+
+  <div className={projectStyles.techStack}>
+    Python • NLP • Scikit-learn • NLTK • TF-IDF • Machine Learning • Streamlit
+  </div>
+
+  <div className={projectStyles.projectButtons}>
+    <a
+      href="TON_LIEN_GITHUB"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaGithub className={projectStyles.icon} />
+      GitHub
+    </a>
+  </div>
 </div>
+
 <div className={projectStyles.projectCard}>
   <a href="/images/Ecommerce.png" target="_blank" rel="noopener noreferrer">
     <img
